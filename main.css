@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Didact+Gothic&display=swap');
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --black:#000000;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+section{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.section-one{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bg2.jpg);
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+}
+.section-one .section-one-logo img{
+    margin: 20px;
+    float: left;
+    width: 150px;
+}
+.section-one .container{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.section-one .container .row .col-7 h3{
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    color: var(--white);
+    margin-top: 250px;
+}
+.section-one .container .row .col-7 p{
+    font-size: 1.3em;
+    color: var(--white);
+    font-family: 'Didact Gothic', sans-serif;
+}
+.section-one .container .row .col-7 button{
+    background-color: var(--yellow);
+    color:var(--black);
+    box-shadow: none;
+}
+.section-one .container .row .col-7 button:focus{
+    box-shadow: none;
+}
+.section-one .container .row .image-area img{
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: -9%;
+    bottom: 25%;
+    height: 500px;
+}
+.section-two .section-two-title{
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+}
+.section-two .section-two-title h3{
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+}
+.section-two .container{
+    margin-right: auto!important;
+    margin-left: auto!important;
+    padding: 10px!important;
+}
+.cards{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.cards .card{
+    position: relative;
+    height: 350px;
+    background: var(--white);
+    width: 80%;
+    padding: 10px;
+    margin:40px;
+}
+.cards .card .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--black);
+    background:var(--white);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+.cards .card:hover .imgBx{
+    width: 100px;
+    height: 100px;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background-color:var(--yellow) ;
+}
+.cards .card .imgBx::before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    color: rgba(255, 220, 220, 0.05);
+    font-weight: 300;
+}
+.cards .card .imgBx img{
+    max-width: 150px;
+    transition: 0.5s ease-in-out;
+}
+.cards .card:hover .imgBx img{
+    max-width: 75px;
+}
+.cards .card .content{
+    position: absolute;
+    right: 0;
+    width: calc(100% - 35px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    font-size: .8em;
+    justify-content: center;
+    align-items: center;
+}
+.cards .card .content h3{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Didact Gothic', sans-serif;
+}
+.cards .card .content p{
+    margin-bottom: 5px;
+    font-size: 14.7px;
+    line-height: 16px;
+    font-family: 'Didact Gothic', sans-serif;
+
+}
+.cards .card .content a{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: var(--yellow);
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.2em;
+    font-family: 'Didact Gothic', sans-serif;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+@media(max-width:992px){
+    .cards{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards .card{
+        width: 400px;
+    }
+    .section-four .container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media(max-width:768px){
+    .section-one{
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/bg2.jpg);
+        height: 100vh;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-attachment:fixed;
+    }
+    .section-one .container .row .col-7 h3{
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 800;
+        font-size: 2em;
+        margin-top: 150px;
+    }
+    .section-one .container .row .col-7 p{
+        font-size: 1em;
+        font-family: 'Didact Gothic', sans-serif;
+    }
+    .section-one .container .row .col-7 button{
+        background-color: var(--black);
+        color:var(--white);
+        box-shadow: none;
+    }
+    .section-one .container .row .col-7 button:focus{
+        box-shadow: none;
+    }
+    .cards .card{
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+    }
+    .cards .card .imgBx{
+        position: relative;
+    }
+    .cards .card .imgBx,
+    .cards .card:hover .imgBx{
+        width: 100%;
+        height: 250px;
+        left: 0;
+    }
+    .cards .card .imgBx img,
+    .cards .card:hover .imgBx img{
+        max-width: 100px;
+    }
+    .cards .card .content{
+        position: relative;
+        width: 100%;
+    }
+    .section-four .container .row{ 
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+    }
+    .section-four .container .row .col{
+        padding: 10px;
+    }
+    .section-one .container .row .image-area img{
+        position: relative;
+        top: auto;
+        left: auto;
+        display: block;
+        max-width: 100%;
+        max-height: 50vh;
+    }
+    .section-three{
+        flex-direction: column;
+        padding: 20px!important;
+        height: 120vh;
+    }
+    .section-three .container .col-5 img{
+        -webkit-transform:rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        transform: rotate(330deg);
+        margin-left: 90px!important;
+        margin-top: 20px;
+        height: 250px;
+    }
+    .section-three .container .col-6{
+        position: absolute!important;
+        margin-top: 265px;
+        max-width: 80%!important;
+        
+    }
+}
+.section-three{
+    background: var(--yellow);
+    padding: 60px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+.section-three .container .col-5 img{
+-webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(330deg);
+  margin-left: 40px;
+  position: absolute;
+}
+.section-three .container .col-6{
+    position: relative;
+    float: right;
+}
+.section-three .container .col-6 h3{
+    margin-top: 25px;
+    font-size: 1.8em;
+    font-weight: 800;
+}
+.section-four{
+    padding:20px;
+}
+.section-four .section-four-title{
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.section-four .section-four-title h3{
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+}
+.section-four .container .row .col img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.section-four .container .row{
+    padding: 10px;
+}
+.section-five{
+    padding: 20px;
+}
+.section-five .section-five-title{
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.section-five .section-five-title h3{
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+}
+.section-five .container .row #contact-form{
+    margin: 5% 1.4%;
+}
+.section-five .container .row #contact-form ul{
+    list-style: none;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+.section-five .container .row #contact-form li{
+    padding: 10px;
+}
+.section-five .container .row #contact-form label{
+    display: block;
+    font-size: .8em;
+    font-weight: 700;
+    font-family: 'Didact Gothic', sans-serif;
+    color: var(--black);
+    padding-left: 5px;
+}
+.section-five .container .row #contact-form input:focus, .container .row #contact-form textarea:focus{
+    box-shadow: none;
+    border-bottom: 3px solid var(--yellow);
+}
+.section-five .container .row #contact-form input, .container .row #contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    padding-top: 7px;
+    padding-left: 5px;
+    resize: vertical;
+    border-top: none;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid var(--black);
+    background: transparent;
+    color: var(--black);
+    font-weight: bolder;
+}
+.section-five.container .row #contact-form li:last-of-type{
+    border-bottom: none;
+}
+.section-five .container .row #contact-form button{
+    margin-left: 50px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    letter-spacing: 1px;
+}
+.section-five .container .row #contact-form .help-block.with-errors {
+    color: #ff5050;
+    margin-top: 5px;
+}
+.section-six{
+    padding: 30px;
+    background: var(--yellow);
+}
+.section-six h6{
+    color: black;
+    font-family: 'Didact Gothic', sans-serif;
+}
+.section-six p{
+    color: black;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 500;
+}
+.section-six a{
+    color: black;
+}
+.section-six a:hover{
+    color: black;
+    text-decoration: none;
+}
+.section-six .footer-copyright{
+    color: black;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 900;
+}
